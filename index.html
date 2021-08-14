@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Tracker</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="getIssues()">
+    <main id="issue-tracker">
+        <div class="container">
+            <div class="text-center p-3">
+                <h1>Issue Tracker</h1>
+            </div>
+            <div class="add-button text-center mt-3 mb-3">
+                <button id="add-issue-btn" class="btn btn-success">Add New issue</button>
+            </div>
+            <div class="card m-3">
+                <div class="no-issue" id="hide">
+                    <h3 class="mt-4 text-center">No issues At the Moment</h3>
+                </div>
+                <div class="add-issue-section mt-4">
+                    <h3 class="text-center">Add a new issue:</h3>
+                    <form id="add-issue-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" id="fullName" class="form-control" placeholder="Your full name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="severity">Severity</label>
+                            <select id="severity" class="form-control">
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea class="form-control" id="description" placeholder="Describe the issue..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Add</button>
+                    </form>
+                </div>
+            </div>
+            <div id="issues-list" class="mb-3">
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="assets/jquery.js"></script>
+    <script src="assets/popper.min.js"></script>
+    <script src="assets/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/chance.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
